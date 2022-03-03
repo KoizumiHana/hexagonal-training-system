@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  postgres:
+    image: "postgres:10"
+    container_name: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_SERVER=postgres
+      - POSTGRES_DB=training
+      - POSTGRES_USER=training-admin
+      - POSTGRES_PASSWORD=admin
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

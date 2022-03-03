@@ -1,0 +1,15 @@
+package com.hexagonal.training.domain.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class CreateTrainingCommand {
+    private String name;
+    private String description;
+}
